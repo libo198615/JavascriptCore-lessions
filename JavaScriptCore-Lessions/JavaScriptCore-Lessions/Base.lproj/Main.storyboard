@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JavaScriptCore_Lessions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CaP-ov-e1p"/>
+                        <viewControllerLayoutGuide type="bottom" id="tf8-RZ-1lA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-J7-xLc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="304"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEY-IC-0Qq">
+                                <rect key="frame" x="0.0" y="324" width="375" height="343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-hs-HJG">
+                                        <rect key="frame" x="163" y="272" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="调用JS"/>
+                                        <connections>
+                                            <action selector="callJS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7A-bC-ToK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kE9-J7-xLc" secondAttribute="trailing" id="0Ph-ki-BbD"/>
+                            <constraint firstItem="tf8-RZ-1lA" firstAttribute="top" secondItem="LEY-IC-0Qq" secondAttribute="bottom" id="3OK-3I-UCJ"/>
+                            <constraint firstItem="LEY-IC-0Qq" firstAttribute="height" secondItem="kE9-J7-xLc" secondAttribute="height" constant="39" id="EzT-hT-XMB"/>
+                            <constraint firstItem="LEY-IC-0Qq" firstAttribute="top" secondItem="kE9-J7-xLc" secondAttribute="bottom" id="QSi-KR-6FT"/>
+                            <constraint firstItem="LEY-IC-0Qq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QYw-fR-YLl"/>
+                            <constraint firstItem="kE9-J7-xLc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ziy-Nw-oVq"/>
+                            <constraint firstItem="kE9-J7-xLc" firstAttribute="top" secondItem="CaP-ov-e1p" secondAttribute="bottom" id="sRe-5M-RD3"/>
+                            <constraint firstAttribute="trailing" secondItem="LEY-IC-0Qq" secondAttribute="trailing" id="wfg-u1-bbZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="LEY-IC-0Qq" id="WqI-v9-xof"/>
+                        <outlet property="webView" destination="kE9-J7-xLc" id="r76-dU-OzE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
